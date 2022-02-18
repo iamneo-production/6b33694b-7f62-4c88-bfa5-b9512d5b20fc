@@ -16,6 +16,7 @@ import { BookeventComponent } from './users/bookevent/bookevent.component';
 import { HomepageComponent } from './users/homepage/homepage.component';
 import { ViewEventComponent } from './users/view-event/view-event.component';
 import { ViewbookedEventComponent } from './users/viewbooked-event/viewbooked-event.component';
+import { EditUserComponent } from './admin/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ViewbookedEventComponent } from './users/viewbooked-event/viewbooked-ev
     HomepageComponent,
     ViewEventComponent,
     ViewbookedEventComponent,
+    EditUserComponent,
     
   ],
   imports: [
