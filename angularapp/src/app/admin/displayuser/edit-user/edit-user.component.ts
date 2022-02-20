@@ -1,15 +1,52 @@
-import { Component, OnInit } from '@angular/core';
+// 
+import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ServicedService } from '../../displayuser/serviced.service';
+import { UserModel } from '../../../shared/user.model';
 
 @Component({
   selector: 'app-edit-user',
   templateUrl: './edit-user.component.html',
-  styleUrls: ['./edit-user.component.css']
+  styles: [
+  ]
 })
 export class EditUserComponent implements OnInit {
-
-  constructor() { }
-
+@Input() dep:any;
+username!:string;
+number!:string;
+EditForm!:FormGroup;
+  constructor( private service :ServicedService) { }
+UserValue!:UserModel
   ngOnInit(): void {
+    // this.username=this.dep.username;
+    // this.number=this.dep.mobileNumber;
+   
+
+    this.EditForm=new FormGroup({
+      UserName:new FormControl(null,Validators.required),
+      Mobile:new FormControl(null,Validators.required),
+      Email:new FormControl(null,Validators.required),
+      Password: new FormControl(null,Validators.required),
+      Userole:new FormControl(null,Validators.required)
+    })
+
   }
+  /**Used in Edit user to update the user */
+ updateUser()
+{
+
+  const body:UserModel={
+    email:this.EditForm?.get('Email')?.value,
+    password:this.EditForm?.get('Password')?.value,
+    username:this.EditForm?.get('UserName')?.value,
+    mobileNumber:this.EditForm?.get('Mobile')?.value,
+    userRole:this.EditForm?.get('Userole')?.value
+  }
+  this.service.updateUser(body).subscribe(resp=>{
+    console.log(resp);
+  });
+
+
+}
 
 }
