@@ -1,8 +1,8 @@
 // 
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ServicedService } from '../../displayuser/serviced.service';
 import { UserModel } from '../../../shared/user.model';
+import { ServicedService } from '../serviced.service';
 
 @Component({
   selector: 'app-edit-user',
@@ -15,7 +15,7 @@ export class EditUserComponent implements OnInit {
 username!:string;
 number!:string;
 EditForm!:FormGroup;
-  constructor( private service :ServicedService) { }
+  constructor( private service : ServicedService ) { }
 UserValue!:UserModel
   ngOnInit(): void {
     // this.username=this.dep.username;

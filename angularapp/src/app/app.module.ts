@@ -16,7 +16,7 @@ import { BookeventComponent } from './users/bookevent/bookevent.component';
 import { HomepageComponent } from './users/homepage/homepage.component';
 import { ViewEventComponent } from './users/view-event/view-event.component';
 import { ViewbookedEventComponent } from './users/viewbooked-event/viewbooked-event.component';
-import { EditUserComponent } from './admin/edit-user/edit-user.component';
+
 import { AddRefreeComponent } from './admin/refree/add-refree/add-refree.component';
 import { DeleteRefreeComponent } from './admin/refree/delete-refree/delete-refree.component';
 import { EditRefreeComponent } from './admin/refree/edit-refree/edit-refree.component';
@@ -28,6 +28,7 @@ import { DeleteVenueComponent } from './admin/venue/delete-venue/delete-venue.co
 import { EditVenueComponent } from './admin/venue/edit-venue/edit-venue.component';
 import { ViewVenueComponent } from './admin/venue/view-venue/view-venue.component';
 import { EditBookingComponent } from './users/bookevent/edit-booking/edit-booking.component';
+import { EditUserComponent } from './admin/displayuser/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
