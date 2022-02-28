@@ -1,0 +1,34 @@
+<div class="mt-5 mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-12 col-lg-10 col-xl-6">
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+                        <h2 class="text-center mb-3">Are You Sure to Delete</h2>
+                        <form style="width: fit-content; margin-top: 30px;" [formGroup]="DeleteForm" (ngSubmit)="deleteRefree()">
+                            <div class="form-group row ">
+                                <label for="" class="col-sm-3 col-form-label">RefreeId</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" formControlName="_refreeId" readonly>
+                                </div>
+                                <label for="" class="col-sm-3 col-form-label">Refree Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" formControlName="_refreeName" readonly>
+                                </div>
+                                <label for="" class="col-sm-3 col-form-label">No Of Matches</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" formControlName="_noOfMatches" readonly>
+                                </div>
+                                <div class="btn-group mt-4">
+                                <button class="btn btn-danger" routerLink="../refree" style="margin-right: 5px;">Cancel</button>
+                                <button class="btn btn-primary float-right" type="submit">Delete</button>
+                            </div>
+                        </div>
+                    
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
