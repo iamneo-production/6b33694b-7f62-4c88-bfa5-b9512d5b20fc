@@ -1,1 +1,58 @@
-<p>edit-booking works!</p>
+<!-- This form get the details for editing the details of the booking -->
+<!-- validation part is left out here -------------------------------------------------------------- -->
+<div class="mt-5 mask d-flex align-items-center h-100 ">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-12 col-lg-10 col-xl-10 p-3">
+        <div class="card p-4" style="border-radius: 15px;">
+          <div class="card-body "></div>
+          <h2 class="text-center mb-3">Edit Booking</h2>
+          <form class="row g-3 fom-group" [formGroup]="EditForm" (ngSubmit)="editBooking()" autocomplete="off">
+            <input type="hidden">
+            <div class="col-md-6">
+              <label for="eventName" class="form-label">Venue Name</label>
+              <input type="text" class="form-control" id="eventName" formControlName="eventName">
+            </div>
+            <div class="col-md-6">
+              <label for="applicantName" class="form-label">Applicant Name</label>
+              <input type="text" class="form-control" id="applicantName" formControlName="applicantName">
+            </div>
+            <div class="col-md-12">
+              <label for="applicantAddress" class="form-label">Applicant Address</label>
+              <input type="text" class="form-control" id="applicantAddress" formControlName="applicantAddress">
+            </div>
+            <div class="col-12">
+              <label for="applicantMobileNo" class="form-label">Mobile No</label>
+              <input type="text" class="form-control" id="applicantMobileNo" formControlName="applicantMobileNo">
+            </div>
+            <div class="col-12">
+              <label for="applicantEmailId" class="form-label">Email</label>
+              <input type="email" class="form-control" id="applicantEmailId" formControlName="applicantEmailId">
+            </div>
+            <div class="col-md-6">
+              <label for="eventAddress" class="form-label">Location</label>
+              <input type="location" class="form-control" id="eventAddress" formControlName="eventAddress">
+            </div>
+            <div class="col-md-6">
+              <label for="eventTime" class="form-label">Time</label>
+              <input type="time" class="form-control" id="eventTime" formControlName="eventTime">
+            </div>
+            <div class="col-md-6">
+              <label for="eventDate" class="form-label">Date</label>
+              <input type="date" class="form-control" id="eventDate" formControlName="eventDate">
+            </div>
+            <div class="col-md-6">
+              <label for="noOfPeople" class="form-label">No of people</label>
+              <input type="number" class="form-control" id="noOfPeople" formControlName="noOfPeople">
+            </div>
+            <div class="btn group mt-15 ">
+              <button class="btn btn-primary mt-10" id="updateVenue" style=" margin-right: 5px;
+            " type="submit"><i class="fas fa-edit"></i> Edit</button>
+              <button class="btn btn-danger mt-10" routerLink="../viewbooking">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
