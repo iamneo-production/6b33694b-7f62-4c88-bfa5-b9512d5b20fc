@@ -17,7 +17,7 @@ export class EditTeamComponent implements OnInit {
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NotificationService } from 'src/app/notification-service.service';
+// import { NotificationService } from 'src/app/notification-service.service';
 import { TeamModel } from '../team.model';
 import { TeamsService } from '../teams.service';
 
@@ -29,7 +29,7 @@ import { TeamsService } from '../teams.service';
 export class EditTeamComponent implements OnInit {
 editValue!: TeamModel;
 TeamForm!:FormGroup;
-  constructor(private service:TeamsService, private route:Router, private notify:NotificationService) { }
+  constructor(private service:TeamsService, private route:Router) { }
 
   ngOnInit(): void {
     this.editValue=this.service.edit;
@@ -64,7 +64,7 @@ TeamForm!:FormGroup;
         this.route.navigate(['admin/teams']);
       })
     })
-    this.notify.showSuccess("","Team Edited Successfully");
+    // this.notify.showSuccess("","Team Edited Successfully");
   }
 
 }

@@ -1,1 +1,13 @@
-<p>users works!</p>
+<div class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a style="color: black;font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bolder;" id="UserBookEvent" routerLink="homepage" class="navbar-brand" href="#"><h2>Baseball Event</h2></a>
+        <a class="nav-link" routerLink="bookEvent" id="BookVenue" style="color: black; font-size: 20px;">Book Event</a>
+        <a class="nav-link" routerLink="viewbooking" id="UserViewBookEvent" style="color: black; font-size: 20px;">View Booked Event</a>
+        <div class="d-flex">
+            <button class="btn btn-danger" id="logout" routerLink="../login" >Logout</button>
+        </div>
+        
+    </div>
+</div>
+
+<router-outlet></router-outlet>
