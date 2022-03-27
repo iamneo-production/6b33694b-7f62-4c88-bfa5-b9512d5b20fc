@@ -1,47 +1,65 @@
-<div class="mt-5 mask d-flex align-items-center h-100 gradient-custom-3">
+<div class="mt-5 mask d-flex ">
     <div class="container h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="column d-flex justify-content-around"><!--d-flex justify-content-center align-items-center h-100">-->
             <div class="col-12 col-md-12 col-lg-10 col-xl-6">
                 <div class="card" style="border-radius: 15px;">
                     <div class="card-body p-5">
-                        <h2 class="text-center mb-3">Add New Team</h2>
+                        <h2 class="text-center mb-3" style="font-family: 'Lobster', cursive;">Add New Team</h2>
                         <form style="width: fit-content; margin-top: 30px;" [formGroup]="TeamForm" (ngSubmit)="addTeams()">
                             <div class="form-group row ">
-                                <label for="" class="col-sm-3 col-form-label">TeamId</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control"  formControlName="_TeamId">
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="teamId" autocomplete="off"  formControlName="_TeamId" placeholder="Enter Team ID">
+                                    <label for="teamId" class="col-sm-3 col-form-label">Team Id</label>
                                 </div>
-                                <label for="" class="col-sm-3 col-form-label">Team Name</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="addTeamName" formControlName="_TeamName">
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="addTeamName" autocomplete="off" formControlName="_TeamName" placeholder="Enter Team Name">
+                                    <label for="addTeamName" class="col-sm-3 col-form-label">Team Name</label>
                                 </div>
-                                <label for="" class="col-sm-3 col-form-label">Image Url</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="addTeamImageUrl" formControlName="_TeamImageUrl">
-                                </div>
-                    
-                                <label for="" class="col-sm-3 col-form-label">Description</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" formControlName="_TeamDescription">
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="addTeamImageUrl" autocomplete="off" formControlName="_TeamImageUrl" placeholder="Enter Image URL">
+                                    <label for="addTeamImageUrl" class="col-sm-3 col-form-label">Image Url</label>
                                 </div>
                     
-                                <label for="" class="col-sm-3 col-form-label">Team Location</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="addTeamLocation" formControlName="_TeamLocation">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="teamDescription" autocomplete="off" formControlName="_TeamDescription" placeholder="Enter Team Description">
+                                    <label for="teamDescription" class="col-sm-3 col-form-label">Description</label>
                                 </div>
-                                <label for="" class="col-sm-3 col-form-label">No Of Players</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="addNoOfPlayers" formControlName="_TeamPlayers">
+                    
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="addTeamLocation" autocomplete="off" formControlName="_TeamLocation" placeholder="Enter Team Location">
+                                    <label for="addTeamLocation" class="col-sm-3 col-form-label">Team Location</label>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="addNoOfPlayers" autocomplete="off" formControlName="_TeamPlayers" placeholder="Enter no.of.players">
+                                    <label for="addNoOfPlayers" class="col-sm-3 col-form-label">No Of Players</label>
                                 </div>
                                 <div class="btn-group mt-4">
-                                <button class="btn btn-danger" style="margin-right: 5px;" routerLink="../teams">Cancel</button>
-                                <button class="btn btn-primary float-right" type="submit">Edit</button>
+                                <button class="btn btn-outline-danger" style="margin-right: 5px;" routerLink="../teams">Cancel</button>
+                                <button class="btn btn-outline-success float-right" type="submit">Add Team</button>
                             </div>
                             </div>
                         </form>
                     </div>
+                    
                 </div>
             </div>
+            <div style="width:40%;"><!--style="width: 70%;">-->
+                <app-add-player></app-add-player>
+            </div>
         </div>
+        
     </div>
+    
+</div>
+
+<!-- <div class="playerForm" ><--style="width: 70%;">--
+    <app-add-player></app-add-player>
+</div> -->
+<div>
+    <!-- <app-display-player></app-display-player> -->
 </div>

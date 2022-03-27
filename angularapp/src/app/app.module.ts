@@ -29,6 +29,9 @@ import { EditVenueComponent } from './admin/venue/edit-venue/edit-venue.componen
 import { ViewVenueComponent } from './admin/venue/view-venue/view-venue.component';
 import { EditBookingComponent } from './users/bookevent/edit-booking/edit-booking.component';
 import { EditUserComponent } from './admin/displayuser/edit-user/edit-user.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { TeamSearchPipe } from './admin/teams/team-search.pipe';
 
 @NgModule({
   declarations: [
@@ -58,11 +61,16 @@ import { EditUserComponent } from './admin/displayuser/edit-user/edit-user.compo
     EditVenueComponent,
     ViewVenueComponent,
     EditBookingComponent,
+    TeamSearchPipe,
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    //BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
