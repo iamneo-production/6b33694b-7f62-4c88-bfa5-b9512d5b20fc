@@ -36,13 +36,14 @@ namespace Baseball.Controllers
 
             }
         }
-        [HttpGet("booked")]
-        public IEnumerable<BookingModel> getRefree()
+        [HttpGet("booked/{id}")]
+        public IEnumerable<BookingModel> GetRefree(string id)
         {
 
             {
-                var teams = _context.BookingModels.ToList();
-                return teams;
+               var bookings =_context.BookingModels.Where(booking => booking.ApplicantEmail==id).ToList();
+               Debug.WriteLine(bookings);
+               return bookings;
             }
         }
         [HttpPut("editBooked/{id}")]
