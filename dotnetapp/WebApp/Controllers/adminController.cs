@@ -21,7 +21,7 @@ namespace Baseball.Controllers
         {
 
             {
-                var users = _context.UserModels.ToList();
+                var users = _context.UserModels.Where(user=> user.UserRole =="user").ToList();
                 return users;
             }
         }
