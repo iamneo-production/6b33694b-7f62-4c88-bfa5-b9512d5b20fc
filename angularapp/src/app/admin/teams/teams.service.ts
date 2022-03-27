@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { PlayerModel } from './player.model';
 import { TeamModel } from './team.model';
 
 @Injectable({
@@ -33,5 +34,18 @@ return this.http.get<TeamModel[]>("https://localhost:5001/api/Team/getTeam")
   deleteTeam(params:number):Observable<TeamModel>{
     let Url=this.APIUrl+"deleteTeam/";
     return this.http.delete<TeamModel>(Url+params);
+  }
+  addPlayer(body:PlayerModel):Observable<PlayerModel>{
+    let Url=this.APIUrl+'addPlayer/';
+    return this.http.post<PlayerModel>(Url,body);
+  }
+  getPlayer():Observable<PlayerModel[]>
+  {
+    return this.http.get<PlayerModel[]>("https://localhost:5001/api/player/getPlayer")
+  }
+
+  getPlayers(params:number):Observable<PlayerModel[]>{
+    let Url=this.APIUrl+'getPlayers/';
+    return this.http.get<PlayerModel[]>(Url+params);
   }
 }

@@ -1,0 +1,25 @@
+/* .container{
+    height: 100%;
+} */
+
+
+#addTeamButton{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.search-bar{
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-control:focus, .btn:focus {
+    box-shadow: none;
+}

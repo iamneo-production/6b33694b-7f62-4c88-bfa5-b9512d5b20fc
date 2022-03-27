@@ -1,0 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.form-floating{
+    margin-bottom: 10px;
+}
+
+label{
+    margin-left: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.container{
+    margin-bottom: 50px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.playerForm{
+    width: 300%;
+}
