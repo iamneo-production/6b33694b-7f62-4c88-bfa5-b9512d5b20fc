@@ -42,7 +42,7 @@ namespace Baseball.Controllers
 
             {
                var bookings =_context.BookingModels.Where(booking => booking.ApplicantEmail==id).ToList();
-               Debug.WriteLine(bookings);
+            //    Debug.WriteLine(bookings);
                return bookings;
             }
         }
