@@ -31,6 +31,9 @@ import { EditBookingComponent } from './users/bookevent/edit-booking/edit-bookin
 import { EditUserComponent } from './admin/displayuser/edit-user/edit-user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RefreeSearchPipe } from './admin/refree/refree-search.pipe';
+import { VenueSearchPipe } from './admin/venue/view-venue/venue-search.pipe';
+import { SearchFilterPipe } from './users/view-event/search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -60,6 +63,9 @@ import { HttpClientModule } from '@angular/common/http';
     EditVenueComponent,
     ViewVenueComponent,
     EditBookingComponent,
+    RefreeSearchPipe,
+    VenueSearchPipe,
+    SearchFilterPipe,
     
   ],
   imports: [
