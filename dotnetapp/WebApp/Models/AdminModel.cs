@@ -13,4 +13,3 @@ namespace Baseball.Model
         public string UserRole { get; set; }
     }
 }
-
