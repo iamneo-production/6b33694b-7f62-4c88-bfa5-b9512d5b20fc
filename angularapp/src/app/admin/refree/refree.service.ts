@@ -7,14 +7,14 @@ import { RefereeModel} from './referee.model';
   providedIn: 'root'
 })
 export class RefreeService {
-readonly ApIUrl="https://localhost:5001/api/Refree/"
+readonly ApIUrl="https://8080-efafafbdbdafeecbadcecbdfcbdfeeeb.examlyiopb.examly.io/api/Refree/"
 
   constructor(private http: HttpClient) { }
 
   //Add the refree
   addRefree(body :RefereeModel):Observable<RefereeModel>
   {
-    let URL=this.ApIUrl+'addVenue/'
+    let URL=this.ApIUrl+'addRefree/'
      return this.http.post<RefereeModel>(URL,body);
   }
 

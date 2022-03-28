@@ -72,7 +72,7 @@ namespace Baseball.Controllers
                     new
                     {
                         StatusCode = 404,
-                        Message = "Venue Not Found"
+                        Message = "Player Not Found"
                     }
                 );
             }
@@ -84,7 +84,7 @@ namespace Baseball.Controllers
                     new
                     {
                         StatusCode = 200,
-                        Message = "Deleted the Venue"
+                        Message = "Deleted the Player"
                     }
                 );
             }

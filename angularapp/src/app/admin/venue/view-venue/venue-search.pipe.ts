@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'refreeSearch'
+  name: 'venueSearch'
 })
 export class VenueSearchPipe implements PipeTransform {
 
@@ -10,14 +10,14 @@ export class VenueSearchPipe implements PipeTransform {
       return value;
     }
 
-    const refrees=[];
-    for(const refree of value){
+    const venues=[];
+    for(const venue of value){
       // if(venue['venueName'].toLowerCase()===searchString.toLowerCase()){
-      if(refree['teamName'].toLowerCase().includes(searchString.toLocaleLowerCase())){
-        refrees.push(refree);
+      if(venue['venueName'].toLowerCase().includes(searchString.toLocaleLowerCase())){
+        venues.push(venue);
       }
     }
-    return refrees;
+    return venues;
   }
 
 }

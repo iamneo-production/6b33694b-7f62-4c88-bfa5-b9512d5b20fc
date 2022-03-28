@@ -34,6 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RefreeSearchPipe } from './admin/refree/refree-search.pipe';
 import { SearchFilterPipe } from './users/view-event/search-filter.pipe';
 import { VenueSearchPipe } from './admin/venue/view-venue/venue-search.pipe';
+import { AddPlayerComponent } from './admin/teams/add-player/add-player.component';
+import { TeamSearchPipe } from './admin/teams/team-search.pipe';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,8 @@ import { VenueSearchPipe } from './admin/venue/view-venue/venue-search.pipe';
     RefreeSearchPipe,
     VenueSearchPipe,
     SearchFilterPipe,
-    
+    AddPlayerComponent,
+    TeamSearchPipe,
   ],
   imports: [
     BrowserModule,

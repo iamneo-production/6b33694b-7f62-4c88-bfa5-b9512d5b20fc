@@ -137,16 +137,16 @@ namespace Baseball.Controllers
             }
 
         }
-        [HttpGet("getSchedule")]
-        public IActionResult ViewBookedEvent()
-        {
-            var events = _context.EventModels.AsQueryable();
-            return Ok(new
-            {
-                StatusCode = 200,
-                Employee_Details = events
-            });
-        }
+        // [HttpGet("getSchedule")]
+        // public IActionResult ViewBookedEvent()
+        // {
+        //     var events = _context.EventModels.AsQueryable();
+        //     return Ok(new
+        //     {
+        //         StatusCode = 200,
+        //         Employee_Details = events
+        //     });
+        // }
 
     }
 }

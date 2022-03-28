@@ -38,7 +38,7 @@ namespace Baseball.Controllers
                 return NotFound(new
                 {
                     StausCode = 404,
-                    Message = "User NOt Found"
+                    Message = "Refree Not Found"
                 });
             }
             else
@@ -62,7 +62,7 @@ namespace Baseball.Controllers
                     new
                     {
                         StatusCode = 404,
-                        Message = "Venue Not Found"
+                        Message = "Refree Not Found"
                     }
                 );
             }
@@ -74,12 +74,12 @@ namespace Baseball.Controllers
                     new
                     {
                         StatusCode = 200,
-                        Message = "Deleted the Venue"
+                        Message = "Deleted the Refree"
                     }
                 );
             }
         }
-        [HttpPost("addVenue")]
+        [HttpPost("addRefree")]
         public IActionResult AddVenue([FromBody] RefreeModel refree)
         {
             if (refree == null)
@@ -93,7 +93,7 @@ namespace Baseball.Controllers
                 return Ok(new
                 {
                     StausCode = 200,
-                    Message = "Venue Added Successfully"
+                    Message = "Refree Added Successfully"
                 });
             }
 

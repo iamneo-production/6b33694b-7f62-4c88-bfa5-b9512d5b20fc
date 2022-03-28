@@ -7,12 +7,12 @@ import { VenueModel } from 'src/app/shared/venue.model';
     providedIn: 'root'
 })
 export class VenueserviceService {
-    readonly APIUrl = "https://localhost:5001/api/Venue/"
+    readonly APIUrl = "https://8080-efafafbdbdafeecbadcecbdfcbdfeeeb.examlyiopb.examly.io/api/Venue"
 
     constructor(private http: HttpClient) { }
 
     getVenue(): Observable<VenueModel[]> {
-        return this.http.get<VenueModel[]>('https://localhost:5001/api/Venue/getAllVenue');
+        return this.http.get<VenueModel[]>('https://8080-efafafbdbdafeecbadcecbdfcbdfeeeb.examlyiopb.examly.io/api/Venue/getAllVenue');
     }
 
 
@@ -40,7 +40,7 @@ export class VenueserviceService {
     //Method to add Venue to the View
     addVenue(body:VenueModel):Observable<VenueModel>
     {
-        return this.http.post<VenueModel>("https://localhost:5001/api/Venue/addVenue",body)
+        return this.http.post<VenueModel>("https://8080-efafafbdbdafeecbadcecbdfcbdfeeeb.examlyiopb.examly.io/api/Venue/addVenue",body)
 
     }
 

@@ -83,7 +83,7 @@ namespace Baseball.Controllers
                     new
                     {
                         Status = 404,
-                        Message = "Team Not Found"
+                        Message = "Booking Not Found"
                     });
             }
             else
