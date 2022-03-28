@@ -3,7 +3,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'refreeSearch'
 })
-export class RefreeSearchPipe implements PipeTransform {
+export class VenueSearchPipe implements PipeTransform {
 
   transform(value: any,searchString:string){
     if(value.length===0 || searchString===""){

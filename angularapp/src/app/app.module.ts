@@ -32,8 +32,8 @@ import { EditUserComponent } from './admin/displayuser/edit-user/edit-user.compo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RefreeSearchPipe } from './admin/refree/refree-search.pipe';
-import { VenueSearchPipe } from './admin/venue/view-venue/venue-search.pipe';
 import { SearchFilterPipe } from './users/view-event/search-filter.pipe';
+import { VenueSearchPipe } from './admin/venue/view-venue/venue-search.pipe';
 
 @NgModule({
   declarations: [

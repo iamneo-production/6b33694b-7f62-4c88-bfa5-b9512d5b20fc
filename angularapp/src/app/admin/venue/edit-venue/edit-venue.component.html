@@ -1,3 +1,29 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+    
+    /* .body{
+       background-color: rgb(236, 236, 236);
+       position: absolute; 
+       width: 100%;
+    } */
+    
+    .form-floating{
+        margin-bottom: 10px;
+    }
+    
+    label{
+        margin-left: 10px;
+        color: rgb(0, 0, 0);
+    }
+    
+    .container{
+        margin-bottom: 50px;
+    }
+    
+    .form-control:focus {
+        box-shadow: none;
+    }
+    </style> 
 <div class="mt-5 mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -8,37 +34,43 @@
                         <form style="width: fit-content; margin-top: 30px;" [formGroup]="EditForm"
                             (ngSubmit)="updateVenue()">
                             <div class="form-group row ">
-                                <label for="" class="col-sm-3 col-form-label">VenueId</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" formControlName="_VenueId">
-                                </div>
-                                <label for="" class="col-sm-3 col-form-label">Venue Name</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="venueName" formControlName="_VenueName">
-                                </div>
-                                <label for="" class="col-sm-3 col-form-label">Image Url</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="imageUrl" formControlName="_VenueImageUrl">
-                                </div>
-
-                                <label for="" class="col-sm-3 col-form-label">Description</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="venueDescription" formControlName="_VenueDescription">
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" formControlName="_VenueId" id="venueId" placeholder="">
+                                    <label for="venueId">VenueId</label>
                                 </div>
                                 
-                                <label for="" class="col-sm-3 col-form-label">Capacity</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="capacityOfVenue" formControlName="_VenueDescription">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="venueName" formControlName="_VenueName" placeholder="">
+                                    <label for="venueName">Venue Name</label>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="imageUrl" formControlName="_VenueImageUrl" placeholder="">
+                                    <label for="imageUrl">Image Url</label>
                                 </div>
 
-                                <label for="" class="col-sm-3 col-form-label">Venue Location</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="venueLocation" formControlName="_VenueLocation">
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="venueDescription" formControlName="_VenueDescription" placeholder="">
+                                    <label for="venueDescription" class="col-sm-3 col-form-label">Description</label>
+                                </div>
+                                
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="capacityOfVenue" formControlName="_VenueDescription" placeholder="">
+                                    <label for="capacityOfVenue">Capacity</label>
+                                </div>
+
+                                
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="venueLocation" formControlName="_VenueLocation" placeholder="">
+                                    <label for="venueLocation" >Venue Location</label>
                                 </div>
                                 <div class="btn-group mt-4">
-                                    <button class="btn btn-danger" style="margin-right: 5px;"
+                                    <button class="btn btn-outline-danger" style="margin-right: 5px;"
                                         (click)="back()">Cancel</button>
-                                    <button class="btn btn-primary float-right" type="submit">Edit</button>
+                                    <button class="btn btn-outline-primary float-right" type="submit">Edit</button>
                                 </div>
                             </div>
                         </form>

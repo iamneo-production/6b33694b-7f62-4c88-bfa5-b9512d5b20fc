@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display&family=Roboto:ital,wght@0,500;1,900&display=swap');
+
+.navbar{
+   margin-bottom: 0;
+   background-color: black;
+}
+
+.navbar-brand{
+    font-family: 'Bebas Neue', cursive;
+}
+
+.nav-link{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+
+.nav-link:hover{
+    color: rgb(100, 255, 255);
+}

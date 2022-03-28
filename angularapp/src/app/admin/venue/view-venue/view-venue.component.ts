@@ -14,6 +14,7 @@ export class ViewVenueComponent implements OnInit {
   venues!: any[];
   Venues!: VenueModel[];
   venueIdd!: number
+  searchString: string='';
   constructor(private service: VenueserviceService, private route: Router, private router: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -48,9 +49,6 @@ export class ViewVenueComponent implements OnInit {
     setTimeout(() => {
       this.route.navigate(["admin/view"]);
     }, 100);
-
-
-
   }
 
 }

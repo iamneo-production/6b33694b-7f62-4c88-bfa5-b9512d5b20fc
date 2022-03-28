@@ -1,51 +1,81 @@
-
-<div class="mt-5 mask d-flex align-items-center h-100 gradient-custom-3">
-    <div  class="container h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12 col-md-12 col-lg-10 col-xl-6">
-                <div class="card" style="border-radius: 15px;">
-                    <div class="card-body p-5">
-                        <h2 class="text-center mb-3">Add New Venue</h2>
-        <form style="width: fit-content; margin-top: 30px;" [formGroup]="AddForm"  (ngSubmit)="addVenue()">
-            <div class="form-group row ">
-                <label for="" class="col-sm-3 col-form-label">VenueId</label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control" id="venueName" formControlName="_VenueId" >
-                </div>
-                <label for="" class="col-sm-3 col-form-label">Venue Name</label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control" id="venueName"formControlName="_VenueName" >
-                </div>
-                <label for="" class="col-sm-3 col-form-label">Image Url</label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control" id="imageUrl" formControlName="_VenueImageUrl" >
-                </div>
-                <label for="" class="col-sm-3 col-form-label">Description</label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control" id="venueDescription" formControlName="_VenueDescription" >
-                </div>
-                
-                <label for="" class="col-sm-3 col-form-label">Capacity</label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control" id="capacityOfVenue" formControlName="_VenueLocation" >
-                </div>
-                <label for="" class="col-sm-3 col-form-label">Venue Location</label>
-                <div class="col-sm-9">
-                    <input type="text" class="form-control" id="venueLocation" formControlName="_VenueLocation" >
-                </div>
-                <div class="btn-group mt-4"> 
-                    <button class="btn btn-danger " style="margin-right: 5px;">Cancel</button>
-                <button class="btn btn-primary float-right" type="submit" id="addVenue" >Add Venue</button>
-           
-                </div>
-                 </div>
-        </form>
-        
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+    
+    /* .body{
+       background-color: rgb(236, 236, 236);
+       position: absolute; 
+       width: 100%;
+    } */
+    
+    .form-floating{
+        margin-bottom: 10px;
+    }
+    
+    label{
+        margin-left: 10px;
+        color: rgb(0, 0, 0);
+    }
+    
+    .container{
+        margin-bottom: 50px;
+    }
+    
+    .form-control:focus {
+        box-shadow: none;
+    }
+    </style> 
+    
+    <body>
+        <div class="mt-5 mask d-flex align-items-center h-100 body"> <!--gradient-custom-3">-->
+            <div  class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-12 col-lg-10 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <h2 class="text-center mb-3" style="font-family: 'Lobster', cursive;">Add New Venue</h2>
+                                <form style="width: fit-content; margin-top: 30px;" [formGroup]="AddForm"  (ngSubmit)="addVenue()">
+                                    <div class="form-group row ">
+                                        
+                                        <div class="form-floating ">
+                                            <input type="text" class="form-control" id="venueId" placeholder="Enter Venue ID" autocomplete="off" formControlName="_VenueId" >
+                                            <label for="venueId" >Venue Id</label>
+                                        </div>
+                                        
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="venueName" placeholder="Enter Venue Name" autocomplete="off" formControlName="_VenueName" >
+                                            <label for="venueName">Venue Name</label>
+                                        </div>
+                                        
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="imageUrl" placeholder="Enter image URL" autocomplete="off" formControlName="_VenueImageUrl" >
+                                            <label for="imageUrl">Image Url</label>
+                                        </div>
+                                        
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="venueDescription" placeholder="Enter Venue Description" autocomplete="off" formControlName="_VenueDescription" >
+                                            <label for="venueDescription">Description</label>
+                                        </div>
+                                        
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="capacityOfVenue" placeholder="Enter Venue Capacity" autocomplete="off" formControlName="_VenueCapacity" >
+                                            <label for="capacityOfVenue" >Capacity</label>
+                                        </div>
+                                        
+                                        <div class=" form-floating">
+                                            <input type="text" class="form-control" id="venueLocation" placeholder="Enter Venue location" autocomplete="off" formControlName="_VenueLocation" >
+                                            <label for="venueLocation">Venue Location</label>
+                                        </div>
+                                        <div class="btn-group mt-4"> 
+                                            <button class="btn btn-outline-danger " style="margin-right: 5px;">Cancel</button>
+                                            <button class="btn btn-outline-success float-right" type="submit" id="addVenue" >Add Venue</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-
-                </div>
+                </div>    
             </div>
-        </div>    
+                
         </div>
-        
-</div>
+    </body>
