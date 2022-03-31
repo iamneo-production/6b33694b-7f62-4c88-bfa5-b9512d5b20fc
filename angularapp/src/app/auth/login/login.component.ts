@@ -28,12 +28,15 @@ export class LoginComponent implements OnInit {
     // this.routes.navigate(['homepage']);
     let _email = this.LoginF.get('email')?.value;
     let _password = this.LoginF.get('password')?.value;
-
+//~~~~~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!~~~~~~~~~~~~~~~~`
+this.authservice.getUserEmail(_email);
+//~~~~~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!~~~~~~~~~`~~~~~~~~~~~`
     //Admin Check
     if (_email === 'admin@gmail.com') {
 
       this.authservice.AdminCheck(_email, _password).subscribe(data => {
         this.auth = data.allowed;
+        this.authservice.adminlogin=this.auth;
               });
       //Navigation after authentication
       setTimeout(() => {
@@ -43,13 +46,14 @@ export class LoginComponent implements OnInit {
         else {
           alert("Access Denied")
         }
-      }, 100);
+      }, );
     }
     //Authentication for Customer using the loginCheck 
     else {
       this.authservice.LoginCheck(_email, _password).subscribe(data => {
         this.auth = data.allowed;
         this.user = data.user;
+        this.authservice.allowlogin=this.auth;
 
       });
       
@@ -60,7 +64,7 @@ export class LoginComponent implements OnInit {
         } else {
           alert("User Not Found");
         }
-      }, 100);
+      }, );
 
     }
 

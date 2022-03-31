@@ -1,22 +1,49 @@
-<div class="container m-4" id="viewBookingBody">
-    <table class="table table-striped" style="background-color: beige;" id="bookingBody">
-      <thead>
-        <th>Venue Name</th>
-        <th>Time</th>
-        <th>Date</th>
-      </thead>
-      <tbody>
-        <tr *ngFor="let s of bookList;let i=index">
-          <td>{{s.eventName}}</td>
-          <td>{{s.eventTime}}</td>
-          <td>{{s.eventFromDate}}</td>
-    
-          <td> <button type="button" class="btn btn-primary" id="editBooking" routerLink="../editbooking" (click)="edit(i)">
-              Edit
-            </button></td>
-          <td><button class="btn btn-danger" id="deleteBooking" (click)="delete(i)">Delete</button></td>
-    
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<style>
+  .form-control:focus {
+    box-shadow: none;
+  }
+  .container{
+    position: relative;
+    height: 100px;
+  }
+
+  tbody{
+    overflow-y:scroll; 
+    height:50%;
+  }
+  th{
+    padding: 20px 0px;
+    text-align: center;
+  }
+  td{
+    text-align: center;
+  }
+</style>
+<body style="background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/12/Baseball-Stadium-HD-Wallpaper.jpg');position: absolute; width: 100%; height: 100%;">
+
+<div class="container m-4" id="viewBookingBody" >
+  <table class="table table-dark table-striped table-hover" style="margin-left: 5%;" id="bookingBody">
+    <thead class="bg-dark">
+      <th>Venue Name</th>
+      <th>Time</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of bookList;let i=index">
+        <td>{{s.eventName}}</td>
+        <td>{{s.eventTime}}</td>
+        <td>{{s.eventFromDate}}</td>
+  
+        <td> <button type="button" class="btn btn-primary" id="editBooking" routerLink="../editbooking" (click)="edit(i)">
+            Edit
+          </button></td>
+        <td><button class="btn btn-danger" id="deleteBooking" (click)="delete(i)">Delete</button></td>
+  
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>

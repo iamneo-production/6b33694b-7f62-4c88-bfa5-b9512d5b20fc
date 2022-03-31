@@ -9,7 +9,6 @@ export class VenueSearchPipe implements PipeTransform {
     if(value.length===0 || searchString===""){
       return value;
     }
-
     const venues=[];
     for(const venue of value){
       // if(venue['venueName'].toLowerCase()===searchString.toLowerCase()){

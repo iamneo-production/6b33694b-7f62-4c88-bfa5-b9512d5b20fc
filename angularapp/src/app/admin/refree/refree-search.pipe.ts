@@ -13,7 +13,7 @@ export class RefreeSearchPipe implements PipeTransform {
     const refrees=[];
     for(const refree of value){
       // if(venue['venueName'].toLowerCase()===searchString.toLowerCase()){
-      if(refree['teamName'].toLowerCase().includes(searchString.toLocaleLowerCase())){
+      if(refree['refereeName'].toLowerCase().includes(searchString.toLocaleLowerCase())){
         refrees.push(refree);
       }
     }

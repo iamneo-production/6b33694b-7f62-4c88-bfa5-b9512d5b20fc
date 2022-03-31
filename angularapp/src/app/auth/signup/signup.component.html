@@ -1,137 +1,84 @@
-<!-- <div class="container">
-    <div class="row">
-        <div class="col">
-            <form [formGroup]="SignUp">
-                <div class="form-group">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <div class="input-group-text">Enter User/Admin</div>
-                        </div>
-                    </div>
-                    <select formControlName="users" class="form-control dropdown-item">
-                        <option *ngFor="let s of user" [value]=s>{{s}}</option>
-                    </select>
-                </div> -->
-                <!--Email-->
-                <!-- <div class="form-group">
-                    <input class="form-control" type="email" formControlName="email" placeholder="Enter the email">
-                    <span class="alert" *ngIf="!SignUp.get('email')?.valid && SignUp.get('email')?.touched"> Invalid
-                        Email</span>
-                </div> -->
-                <!--User Name-->
-                <!-- <div class="form-group">
-                    <input type="text" formControlName="username" class="form-control" placeholder="Enter the username">
-                    <span class="alert"
-                        *ngIf="!SignUp.get('username')?.valid && SignUp.get('username')?.touched; ">Invalid userName
-                        !!!</span>
-                </div> -->
-                <!--Mobile Number-->
-                <!-- <div class="form-group">
-                    <input type="text" formControlName="mobile" class="form-control"
-                        placeholder="Enter the mobile number">
-                    <span class="alert" *ngIf="!SignUp.get('mobile')?.valid && SignUp.get('mobile')?.touched; ">Invalid
-                        Mobilenumber!!!</span>
-
-                </div> -->
-                <!--Password-->
-                <!-- <div class="form-group">
-                    <input type="password" formControlName="password" class="form-control"
-                        placeholder="Enter your password"> -->
-                    <!--<span class="alert" >Passwords Don't Match</span>-->
-                <!-- </div> -->
-                <!--Confirm Password-->
-                <!-- <div class="form-group">
-                    <input type="password" formControlName="confirmpass" class="form-control"
-                        placeholder="Confirm your password"> -->
-                <!-- </div> -->
-                <!--Login Button-->
-                <!-- <button class="btn btn-success">Signup</button> &nbsp;&nbsp;
-                <button class="btn btn-success" (click)="toLogin()">To Login</button> -->
-<!-- 
-            </form>
-        </div>
-    </div>
-</div> -->
 
 <section class="vh-100 bg-image"
-    style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
-    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-        <div class="container h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-                    <div class="card" style="border-radius: 15px;">
-                        <div class="card-body p-5">
-                            <!-- <h2 class="text-uppercase text-center mb-5">Create an account</h2> -->
-                            <form [formGroup]="SignUp">
-                                <!-- <div class="form-group">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">Enter User/Admin</div>
-                                        </div>
+style="background-image: url('https://wallpaperaccess.com/full/5923138.jpg');">
+<div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card" style="border-radius: 15px;">
+                    <h2 class="signup-header">SignUp</h2>
+                    <div class="card-body p-5">
+                        <!-- <h2 class="text-uppercase text-center mb-5">Create an account</h2> -->
+                        <form [formGroup]="SignUp">
+                            <!-- <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Enter User/Admin</div>
                                     </div>
+                                </div>
+                                
+                          
+                                <select  formControlName="users" class="form-control dropdown-item">
+                                    <option value="" disabled selected hidden>Choose your color</option>
+                                    <option *ngFor="let s of user" [value]=s>{{s}}</option>
+                                </select>
+                            </div> -->
+                            <!-- <div class="form-box"> -->
+                                <div class="button-box">
+                                    <div id="btn"  #btn></div>
+                                    <button class="toggle-btn" (click)="users(btn)" id="user" formControlName="user" type="button" >User</button>
+                                    <button class="toggle-btn" (click)="admin(btn)" id="admin" formControlName="admin" type="button" >Admin</button>  
                                     
-                              
-                                    <select  formControlName="users" class="form-control dropdown-item">
-                                        <option value="" disabled selected hidden>Choose your color</option>
-                                        <option *ngFor="let s of user" [value]=s>{{s}}</option>
-                                    </select>
-                                </div> -->
-                                <!-- <div class="form-box"> -->
-                                    <div class="button-box">
-                                        <div id="btn"  #btn></div>
-                                            <button class="toggle-btn" (click)="users(btn)" type="button">User</button>
-                                            <button class="toggle-btn" (click)="admin(btn)" type="button">Admin</button>
-                                    </div>
-                                   &nbsp;
-                                <!--Email-->
-                                <div class="form-group">
-                                    <input id="email" class="form-control" type="email" formControlName="email" placeholder="Enter the email">
-                                    <span class="alert" *ngIf="!SignUp.get('email')?.valid && SignUp.get('email')?.touched"> Invalid
-                                        Email</span>
                                 </div>
-                                &nbsp;
-                                <!--User Name-->
-                                <div class="form-group">
-                                    <input type="text" formControlName="username" id="username" class="form-control" placeholder="Enter the username">
-                                    <span class="alert"
-                                        *ngIf="!SignUp.get('username')?.valid && SignUp.get('username')?.touched; ">Invalid userName
-                                        !!!</span>
-                                </div>
-                                &nbsp;
-                                <!--Mobile Number-->
-                                <div class="form-group">
-                                    <input type="text" formControlName="mobile" id="mobileNumber" class="form-control"
-                                        placeholder="Enter the mobile number">
-                                    <span class="alert" *ngIf="!SignUp.get('mobile')?.valid && SignUp.get('mobile')?.touched; ">Invalid
-                                        Mobile Number!!!</span>
-                
-                                </div>
-                                &nbsp;
-                                <!--Password-->
-                                <div class="form-group">
-                                    <input type="password" formControlName="password" id="password" class="form-control"
-                                        placeholder="Enter your password">
-                                    <!--<span class="alert" >Passwords Don't Match</span>-->
-                                </div>
-                                &nbsp;
-                                <!--Confirm Password-->
-                                <div class="form-group">
-                                    <input type="password" formControlName="confirmpass" id="confirmPassword" (change)="PassCheck()" class="form-control"
-                                        placeholder="Confirm your password">
-                                </div>
-                                <!--Sign Up-->
-                                &nbsp;
-                                <div class="align-items-center">
-                                <button class="btn btn-success" id="submitButton" (click)="signUp()">Signup</button> &nbsp;
+                            <!--Email-->
+                            <div class="form-group">
+                                <input id="email" class="form-control" type="email" formControlName="email" autocomplete="off" placeholder="Enter the email">
+                                <span class="alert" *ngIf="!SignUp.get('email')?.valid && SignUp.get('email')?.touched"> Invalid
+                                    Email</span>
+                            </div>
+                            &nbsp;
+                            <!--User Name-->
+                            <div class="form-group">
+                                <input type="text" formControlName="username" id="username" class="form-control" autocomplete="off" placeholder="Enter the username">
+                                <span class="alert"
+                                    *ngIf="!SignUp.get('username')?.valid && SignUp.get('username')?.touched; ">Invalid userName
+                                    !!!</span>
+                            </div>
+                            &nbsp;
+                            <!--Mobile Number-->
+                            <div class="form-group">
+                                <input type="text" formControlName="mobile" id="mobileNumber" class="form-control" autocomplete="off"
+                                    placeholder="Enter the mobile number">
+                                <span class="alert" *ngIf="!SignUp.get('mobile')?.valid && SignUp.get('mobile')?.touched; ">Invalid
+                                    Mobile Number!!!</span>
+            
+                            </div>
+                            &nbsp;
+                            <!--Password-->
+                            <div class="form-group">
+                                <input type="password" formControlName="password" id="password" class="form-control"
+                                    placeholder="Enter your password">
+                                <!--<span class="alert" >Passwords Don't Match</span>-->
+                            </div>
+                            &nbsp;
+                            <!--Confirm Password-->
+                            <div class="form-group">
+                                <input type="password" formControlName="confirmpass" id="confirmPassword" (change)="PassCheck()" class="form-control"
+                                    placeholder="Confirm your password">
+                            </div>
+                            <!--Sign Up-->
+                            &nbsp;
+                            <div class="align-items-center">
+                            <button class="btn btn-success" id="submitButton" (click)="signUp()">Signup</button> &nbsp;
 
 <!--Navigate to Login Page-->
-                                 <a id="loginButton" routerLink="../login">Login</a>
-                            </div>
-                            </form>
+                             <a id="loginButton" routerLink="../login">Login</a>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </section>

@@ -1,98 +1,179 @@
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
 
-        <div class="card " id="eventGrid" >
-            <img src="http://byrl.me/baseball" class="card-img-top " alt="...">
-            <div class="card-body">
-                <h5 class="card-title text-center">Oracle Park</h5>
-                <div class="d-flex">
-                    <p class="card-text mx-4">Place: San Franci</p>
-                    <a href="#" class="btn btn-sm btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-
-        <div class="card " id="eventGrid" >
-            <img src="http://byrl.me/baseball" class="card-img-top " alt="...">
-            <div class="card-body">
-                <h5 class="card-title text-center">Oracle Park</h5>
-                <div class="d-flex">
-                    <p class="card-text mx-4">Place: San Franci</p>
-                    <a href="#" class="btn btn-sm btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-
-        <div class="card " id="eventGrid" >
-            <img src="http://byrl.me/baseball" class="card-img-top " alt="...">
-            <div class="card-body">
-                <h5 class="card-title text-center">Oracle Park</h5>
-                <div class="d-flex">
-                    <p class="card-text mx-4">Place: San Franci</p>
-                    <a href="#" class="btn btn-sm btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-
-        <div class="card " id="eventGrid" >
-            <img src="http://byrl.me/baseball" class="card-img-top " alt="...">
-            <div class="card-body">
-                <h5 class="card-title text-center">Oracle Park</h5>
-                <div class="d-flex">
-                    <p class="card-text mx-4">Place: San Franci</p>
-                    <a href="#" class="btn btn-sm btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-
-        <div class="card " id="eventGrid" >
-            <img src="http://byrl.me/baseball" class="card-img-top " alt="...">
-            <div class="card-body">
-                <h5 class="card-title text-center">Oracle Park</h5>
-                <div class="d-flex">
-                    <p class="card-text mx-4">Place: San Franci</p>
-                    <a href="#" class="btn btn-sm btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 mb-4">
-
-        <div class="card " id="eventGrid" >
-            <img src="http://byrl.me/baseball" class="card-img-top " alt="...">
-            <div class="card-body">
-                <h5 class="card-title text-center">Oracle Park</h5>
-                <div class="d-flex">
-                    <p class="card-text mx-4">Place: San Franci</p>
-                    <a href="#" class="btn btn-sm btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</div> -->
-<div class="container mt-4">
-    <div class="row">
-        <div class="col-6 col-md-4 col-lg-3 mb-4"*ngFor="let s of venues;let i = index"  >
-            <div class="card " id="eventGrid1" style="border-radius: 10px; " >
-                <img src="{{s.venueImageUrl}}" style="height: 15rem;border-radius: 10px;" class="card-img-top " alt="...">
-                <div class="card-body">
-                    <h5 class="card-title text-center">{{s.venueName}}</h5>
-                    <div class="d-flex">
-                        <p class="card-text mx-4">Place: {{s.venueDescription}}</p>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif
+    }
+   
+    .card{
+      width: 300px; 
+      min-width: 200px;
+    }
+    .card-center{
+          
+      margin: 10px 0px;
+      position: relative;
+      display: grid;
+      justify-content: center
+    }
+    .amountWhite{
+      font-family: 'Lato';
+      font-weight: 400;
+      font-size: 48px;
+      margin: 20px 0px;
+      padding: 20px;
+    }
+  
+    #searchBar,#searchButton{
+      height: 50px;
+      padding: 5px;
+    }
+    
+  .search-bar{
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .form-control:focus, .btn:focus {
+      box-shadow: none;
+    }
+  
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
+  /* .showcase img{
+    width: 100%;
+    height: 400px;
+  } */
+  
+  
+  .container {
+      margin: auto;
+      transform-style: preserve-3d
+  }
+  
+  .container .box {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 20px;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      cursor: pointer
+  }
+  
+  .container .box .body {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: 0.9s ease
+  }
+  
+  .container .box .body .imgContainer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d
+  }
+  
+  /* .container .box .body .imgContainer img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+  } */
+  
+  .container .box .body .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #333;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      transform: rotateY(180deg)
+  }
+  
+  .container .box:hover .body {
+      transform: rotateY(180deg)
+  }
+  
+  .container .box .body .content div {
+      transform-style: preserve-3d;
+      padding: 20px;
+      background: linear-gradient(45deg, #FE0061, #FFEB3B);
+      transform: translateZ(100px)
+  }
+  
+  .container .box .body .content div h3 {
+      letter-spacing: 1px
+  }
+  </style>
+  <!-- <div class="showcase">
+      <img src="https://c4.wallpaperflare.com/wallpaper/749/594/423/stadium-baseball-sunset-wallpaper-preview.jpg" alt="">
+  </div> -->
+  <div class="input-group search-bar">
+      <input type="text" id="searchBar" class="form-control"  [(ngModel)]="searchString" placeholder="Search by Venue Name"/>
+      <button type="button" id="searchButton" class="btn btn-primary">
+        Search
+        <!-- <i class="fas fa-search"></i> -->
+      </button>
+  </div> 
+  <div class="container mt-4">
+      <!--  
+      <div class="row">
+          <- <div class="col-6 col-md-4 col-lg-3 mb-4" *ngFor="let s of venues;let i = index; | filter:searchValue"  > --
+          <div class="col-6 col-md-4 col-lg-3 mb-4" *ngFor="let venue of venues | searchFilter:searchString"  >
+          <-- <div class="col-6 col-md-4 col-lg-3 mb-4" ng-repeat="s of venues | filter:searchValue"  > --
+              <div class="card " id="eventGrid1" style="border-radius: 10px; " >
+                  <img src="{{venue.venueImageUrl}}" style="height: 15rem;border-radius: 10px;" class="card-img-top " alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title text-center">{{venue.venueName}}</h5>
+                      <div class="d-flex">
+                          <p class="card-text mx-4">Place: {{venue.venueLocation}}</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>-->
+  
+      <div class="container d-flex align-items-center justify-content-center flex-wrap">
+        <div  class=" box col-6 col-md-4 col-lg-3 mb-4" *ngFor="let venue of venues | searchFilter:searchString" >
+            <div class="body">
+                <div class="imgContainer" id="eventGrid1" style="height: 500px;"> 
+                  
+                    <!-- <div class="col-6 col-md-4 col-lg-3 mb-4" ng-repeat="s of venues | filter:searchValue"  > -->
+                        <div class="card "  style="border-radius: 10px; " >
+                          
+                            <img src="{{venue.venueImageUrl}}" style="height: 15rem;border-radius: 10px;" class="card-img-top " alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title text-center">{{venue.venueName}}</h5>
+                                <div class="d-flex">
+                                    <p class="card-text mx-4">Place: {{venue.venueLocation}}</p>
+                                </div>
+                            </div> 
+                        </div> 
                     
+                </div>
+                <div class="content d-flex flex-column align-items-center justify-content-center">
+                    <div>
+                        <h3 class="text-dark fs-5">Venue Discription</h3>
+                        <p class="fs-6 text-white">{{venue.venueDescription}}</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+  </div>

@@ -13,9 +13,9 @@ readonly API="https://8080-efafafbdbdafeecbadcecbdfcbdfeeeb.examlyiopb.examly.io
     let Url=this.API+'bookEvent/';
     return this.http.post<BookingDetails>(Url,body);
   }
-  getbooking():Observable<BookingDetails[]>{
-    let Url=this.API+'booked/'
-    return this.http.get<BookingDetails[]>(Url)
+  getbooking(params:string):Observable<BookingDetails[]>{
+    let Url=this.API+'booked/';
+    return this.http.get<BookingDetails[]>(Url+params);
   }
   
 

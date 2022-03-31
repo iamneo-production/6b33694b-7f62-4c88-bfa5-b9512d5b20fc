@@ -1,0 +1,56 @@
+ /* section{
+    background-image: url('/src/assets/Baseball-Stadium-HD-Wallpaper.jpg');
+} */
+
+/*input{
+    background-image: url(/baseball/src/assets/login-bg.jpg);
+    margin-bottom: 10px;
+} */
+
+.login-header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+   }
+   
+   input:focus{
+       outline: none !important;
+   }
+   
+   input{
+      border: none;
+      border-bottom: 2px solid black;
+      outline: none;
+      background-color: rgb(250, 250, 250);
+      /* background-color: transparent; */
+   }
+   
+   .card{
+       background-color: rgb(250, 250, 250);
+       /* background-color: transparent; */
+       margin-left: 78%;
+       width: 70%;
+   }
+   
+   .card-body{
+       display: flex;
+       flex-direction: column;
+      justify-content: center;
+   }
+   
+   .form-group{
+       margin-bottom: 20px;
+   }
+   
+   .signup-link{
+       margin-top: 20px;
+   }
+   
+    button{
+       margin-left: 43%;
+   }
+   
+   .form-control:focus {
+       box-shadow: none;
+   }

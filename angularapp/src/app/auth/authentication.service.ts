@@ -14,16 +14,21 @@ export class AuthenticationService {
 API='https://8080-efafafbdbdafeecbadcecbdfcbdfeeeb.examlyiopb.examly.io/';
 
 //Login check For Customer
+allowlogin!:boolean;
 LoginCheck(_email:string,_password:string):Observable<ResponseModel>{
   let Url=this.API+'user/login';
   const body={email: _email, password: _password}
   return this.http.post<ResponseModel>(Url,body);
 }
 email:string="";
-getUserEmail(_email:string){
-  this.email= _email;
-}
+
+   //~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!~~~~~~~~~~~~~~~
+   getUserEmail(_email:string){
+    this.email= _email;
+};
+//~~~~~~~~~~~~~~~~~~!!!!!!!!!!!!!!!!!!!!!!~~~~~~~~~~
 //Check For Admins
+adminlogin!:boolean;
 AdminCheck(_email:string, _pass:string): Observable<AdminResponseModel>{
   let Url=this.API+'admin/login';
   const body={email: _email,password:_pass}

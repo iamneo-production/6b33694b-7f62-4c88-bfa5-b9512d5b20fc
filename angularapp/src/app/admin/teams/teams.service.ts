@@ -45,7 +45,7 @@ return this.http.get<TeamModel[]>("https://8080-efafafbdbdafeecbadcecbdfcbdfeeeb
   }
 
   getPlayers(params:number):Observable<PlayerModel[]>{
-    let Url=this.APIUrl+'getPlayers/';
+    let Url="https://8080-efafafbdbdafeecbadcecbdfcbdfeeeb.examlyiopb.examly.io/api/Player/getPlayers/";
     return this.http.get<PlayerModel[]>(Url+params);
   }
 }

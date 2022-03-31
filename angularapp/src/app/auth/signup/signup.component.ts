@@ -13,6 +13,7 @@ export class SignupComponent implements OnInit {
   SignUp!: FormGroup;
   user=['user','admin'];
   auth!:boolean;
+  userType:string='';
   constructor(private authservice: AuthenticationService ,private routes: Router) { }
   // let btn=document.getElementById("btn");
  
@@ -54,7 +55,7 @@ signUp()
       password : this.SignUp.get('password')?.value,
       username : this.SignUp.get('username')?.value,
       mobileNumber : this.SignUp.get('mobile')?.value,
-      userRole : "user"
+      userRole : this.userType
   }
   //Post the value to UserModel
   console.log(body);
@@ -76,10 +77,12 @@ setTimeout(()=>{
   }
   users(elem :HTMLElement)
   {
+    this.userType="user";
     elem.style.left='0'
   }
   admin(elem:HTMLElement)
   {
+    this.userType="admin";
     elem.style.left='60px'
   }
 }

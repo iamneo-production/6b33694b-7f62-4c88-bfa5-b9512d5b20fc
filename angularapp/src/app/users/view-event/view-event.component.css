@@ -1,18 +1,26 @@
 .card{
-    width: 300px; 
-    min-width: 200px;
-  }
-  .card-center{
-        
-    margin: 10px 0px;
-    position: relative;
-    display: grid;
-    justify-content: center
-  }
-  .amountWhite{
-    font-family: 'Lato';
-    font-weight: 400;
-    font-size: 48px;
-    margin: 20px 0px;
-    padding: 20px;
-  }
+  width: 300px; 
+  min-width: 200px;
+}
+.card-center{
+      
+  margin: 10px 0px;
+  position: relative;
+  display: grid;
+  justify-content: center
+}
+.amountWhite{
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 48px;
+  margin: 20px 0px;
+  padding: 20px;
+}
+
+.search-bar{
+width: 30%;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}

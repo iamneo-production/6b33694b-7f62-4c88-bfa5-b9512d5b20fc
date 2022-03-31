@@ -23,6 +23,7 @@ import { UsersComponent } from "./users/users.component";
 import { BookeventComponent } from "./users/bookevent/bookevent.component";
 import { ViewbookedEventComponent } from "./users/viewbooked-event/viewbooked-event.component";
 import { EditBookingComponent } from "./users/bookevent/edit-booking/edit-booking.component";
+import { AdminGuard, AuthGuard, CustomerGaurd } from "./auth/auth.guard";
 const routes: Routes = [
     { path: "", redirectTo: "/login", pathMatch: 'full' },
     { path: "login", component: LoginComponent },
@@ -34,8 +35,10 @@ const routes: Routes = [
             { path: 'homepage', component: HomepageComponent },
             { path: 'bookEvent', component: BookeventComponent },
             { path: 'viewbooking', component: ViewbookedEventComponent },
-            { path: 'editbooking', component: EditBookingComponent }
-        ]
+            { path: 'editbooking', component: EditBookingComponent },
+            
+        ],
+        canActivateChild:[CustomerGaurd]
     },
     {
         path: "admin",
@@ -54,8 +57,7 @@ const routes: Routes = [
             { path: 'editTeam', component: EditTeamComponent },
             { path: 'addTeam', component: AddTeamComponent },
             { path: 'deleteTeam', component: DeleteTeamComponent }
-
-        ]
+        ],canActivate:[AuthGuard],canActivateChild:[AdminGuard]
     }]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
